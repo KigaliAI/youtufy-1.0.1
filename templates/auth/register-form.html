@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register – YouTufy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>📝 Create a Free YouTufy Account</h1>
+  </header>
+
+  <main class="container">
+    <form action="/users/register" method="post" class="form">
+      <label for="username">👤 Username</label><br />
+      <input type="text" id="username" name="username" required /><br /><br />
+
+      <label for="email">📧 Email</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="password">🔑 Password</label><br />
+      <input type="password" id="password" name="password" required /><br /><br />
+
+      <label for="confirm_password">🔁 Repeat Password</label><br />
+      <input type="password" id="confirm_password" name="confirm_password" required /><br /><br />
+
+      <button type="submit" class="btn">Create Account</button>
+    </form>
+
+    <div style="margin-top: 1.5rem;">
+      <p>Already have an account? <a href="/auth/login-form.html">Login here</a></p>
+    </div>
+
+    <hr style="margin: 2rem 0;" />
+
+    <p style="font-weight: bold; font-size: 1.1rem;">Or sign up with Google</p>
+    <a class="btn" href="/oauth/login">🔐 Continue with Google</a>
+  </main>
+
+  <footer>
+    <p>
+      © 2025 YouTufy |
+      <a href="/auth/privacy.html">Privacy Policy</a> |
+      <a href="/auth/terms.html">Terms of Service</a> |
+      <a href="/auth/cookie.html">Cookies</a>
+    </p>
+  </footer>
+</body>
+</html>

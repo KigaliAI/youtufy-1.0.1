@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTufy Subscriptions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>📺 Subscriptions Dashboard</h1>
+    <p>Welcome, {{ user_email }}</p>
+  </header>
+
+  <main class="container">
+    {% if subscriptions %}
+      <div class="grid">
+        {% for sub in subscriptions %}
+          <div class="card">
+            <h3>{{ sub.snippet.title }}</h3>
+            <img src="{{ sub.snippet.thumbnails.default.url }}" alt="Thumbnail" width="120" height="90" />
+            <ul>
+              <li>👁️ Views: {{ sub.statistics.viewCount }}</li>
+              <li>👥 Subscribers: {{ sub.statistics.subscriberCount }}</li>
+              <li>🎬 Videos: {{ sub.statistics.videoCount }}</li>
+              {% if sub.latestVideoDate %}
+                <li>📅 Last Upload: {{ sub.latestVideoDate[:10] }}</li>
+              {% endif %}
+            </ul>
+            <a class="btn" href="{{ sub.channelUrl }}" target="_blank">Visit Channel</a>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No subscriptions found.</p>
+    {% endif %}
+  </main>
+
+  <footer>
+    <p>
+      © 2025 YouTufy |
+      <a href="/auth/privacy.html">Privacy</a> |
+      <a href="/auth/terms.html">Terms</a>
+    </p>
+  </footer>
+</body>
+</html>

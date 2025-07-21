@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTufy – YouTube Subscriptions System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Link to FastAPI static CSS -->
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <img src="/static/logo.jpeg" alt="YouTufy Logo" class="logo" onerror="this.style.display='none';" />
+    <h1>Welcome to YouTufy</h1>
+    <p class="tagline">Your YouTube Subscriptions System</p>
+  </header>
+
+  <main class="container">
+    <h2>Why YouTufy?</h2>
+    <p>
+      YouTufy is a subscription management tool designed to help you keep track of your favorite YouTube channels.
+      By securely accessing your subscriptions, YouTufy provides valuable insights such as subscriber counts, video uploads,
+      and engagement metrics—all without storing your private data.
+    </p>
+
+    <p>🔒 Your data is protected · Access granted via Google OAuth (<code>youtube.readonly</code>)</p>
+    <p>🛡️ We request <code>youtube.readonly</code> permission to access your subscriptions securely.</p>
+
+    <p style="font-size:1.1rem; font-weight:bold; color:magenta;">✅ <strong>Choose one of the login methods:</strong></p>
+
+    <div class="btn-container">
+      <a class="btn" href="/oauth/login">🔐 Continue with Google</a>
+      <a class="btn" href="/auth/login-form.html">✉️ Existing Account Login</a>
+      <a class="btn" href="/auth/register-form.html">📝 Create Free Account</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      © 2025 YouTufy |
+      <a href="/auth/privacy.html" target="_blank">Privacy Policy</a> |
+      <a href="/auth/terms.html" target="_blank">Terms of Service</a> |
+      <a href="/auth/cookie.html" target="_blank">Cookies</a>
+    </p>
+  </footer>
+</body>
+</html>
