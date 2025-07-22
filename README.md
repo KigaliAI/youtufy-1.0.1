@@ -15,6 +15,14 @@ Tech Stack
 
 - Backend: FastAPI + SQLAlchemy + PostgreSQL
 - Auth: Google OAuth2 (via `google-auth`)
-- Frontend: Deployed via 
+- Frontend: Deployed via Netlify
+  Domain: https://youtufy.com
+- Backend (API) 
 - Database: PostgreSQL (local via Docker, or managed on GCP Cloud SQL)
 - Deployment: Docker + Docker Compose
+
+Contributing
+Feel free to fork and submit pull requests! Suggestions welcome via: https://github.com/KigaliAI/youtufy-1.0.1
+
+License
+MIT License © 2025 YouTufy
