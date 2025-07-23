@@ -42,3 +42,6 @@ itsdangerous>=2.1
 # For handling multipart/form-data
 python-multipart>=0.0.6
 
+bcrypt==3.2.2
+
+

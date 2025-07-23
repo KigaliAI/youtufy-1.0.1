@@ -19,7 +19,15 @@ from backend.database import create_tables
 create_tables()
 
 # Determine environment
-ENV = os.getenv("ENV", "development")
+ENV = os.getenv("ENV", "production")
+
+# Diagnostics – print key startup info
+print(f"🔧 Current ENV: {ENV}")
+print(f"📦 Database URL: {os.getenv('DATABASE_URL')}")
+print("🚀 Beginning YouTufy startup sequence...")
+
+if ENV != "production":
+    load_dotenv(dotenv_path="/app/.env")
 
 # Initialize FastAPI
 app = FastAPI(title="YouTufy API", version="1.0.0", docs_url="/docs", redoc_url="/redoc")
@@ -72,4 +80,4 @@ async def startup_event():
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 8080))
-    uvicorn.run(app, host="0.0.0.0", port=port, reload=True)
+    uvicorn.run(app, host="0.0.0.0", port=port)
